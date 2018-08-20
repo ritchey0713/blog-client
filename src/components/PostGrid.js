@@ -19,7 +19,7 @@ class PostGrid extends Component {
             </CSSTransitionGroup>
             <figcaption>
               <p>{post.caption}</p>
-              <div classNmae="control-buttons">
+              <div className="control-buttons">
                 <button className="heart" onClick={this.props.addLike(index)}> &hearts; {post.likes} </button>
                 <Link className="button" to={`posts/${post.id}`}>
                   <span className="comment-count">
@@ -29,6 +29,10 @@ class PostGrid extends Component {
                 </Link>
               </div>
             </figcaption>
+          </div>
+          <div className="details">
+          {post.comments.length}
+          {post.likes}
           </div>
         </div>
       </div>

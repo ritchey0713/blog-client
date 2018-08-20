@@ -7,6 +7,7 @@ import Comments from './comments/Comments.js'
 import { getPost } from '../actions/posts.js'
 import { deletePost } from '../actions/posts.js'
 import Navbar from './static/Navbar'
+import JumboSinglePost from './static/JumboSinglePost'
 
 class SinglePost extends Component{
 
@@ -27,10 +28,9 @@ this.props.history.push('/')
     return(
       <div>
       <Navbar />
-        <h1 className="container">{this.props.posts.title}</h1>
-      <figcaption className="container-single">
-        <h6>Caption:{this.props.posts.caption} <br /></h6>
-        <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
+      <JumboSinglePost title={this.props.posts.title} subtitle={this.props.posts.caption} />
+        <figcaption className="container-single">
+          <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
             <Comments post={this.props.posts} className="comments"/>
           </figcaption>
       </div>

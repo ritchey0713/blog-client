@@ -15,7 +15,6 @@ class Comments extends Component{
       <div>
           <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
           </Disqus.CommentCount >
-          
           <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </div>
     );

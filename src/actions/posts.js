@@ -1,5 +1,5 @@
 const API_URL = process.env.REACT_APP_API_URL
-// action creators 
+// action creators
 const addPost = post => {
   return {
     type: 'CREATE_NEW_POST',
@@ -27,6 +27,8 @@ const deletePost = post => {
     post
   }
 }
+
+// async actions 
 
 export const createPost = post => {
   return dispatch => {

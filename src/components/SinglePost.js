@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+
 import './SinglePost.css'
 import Comments from './comments/Comments.js'
-
 import { getPost } from '../actions/posts.js'
-
 import { deletePost } from '../actions/posts.js'
+import Navbar from './static/Navbar'
 
 class SinglePost extends Component{
 
@@ -23,9 +23,10 @@ this.props.history.push('/')
 
 
   render(){
-    console.log(this.props)
+
     return(
       <div>
+      <Navbar />
         <h1 className="container">{this.props.posts.title}</h1>
       <figcaption className="container-single">
         <h6>Caption:{this.props.posts.caption} <br /></h6>

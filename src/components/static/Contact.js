@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import Jumbotron from './Jumbotron'
 
-const Contact = (props) => {
+const Contact = () => {
     return(
       <div>
         <div className="container">

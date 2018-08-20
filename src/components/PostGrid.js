@@ -16,6 +16,18 @@ class PostGrid extends Component {
               transitionLeaveTimeout={500}>
               <span key={post.likes} className="likes-heart">{post.likes}</span>
             </CSSTransitionGroup>
+            <figcaption>
+              <p>{post.caption}</p>
+              <div classNmae="control-buttons">
+                <button className="heart" onClick={this.props.addLike(i)}> &hearts; {post.likes} </button>
+                <Link className="button" to={`posts/${post.id}`}>
+                  <span className="comment-count">
+                    <span classNmae="speech-bubble"></span>
+                      {comments[post.id] ? comments[post.id].length : 0 }
+                    </span>
+                </Link>
+              </div>
+            </figcaption>
           </div>
         </div>
       </div>

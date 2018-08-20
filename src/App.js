@@ -19,8 +19,8 @@ class App extends Component {
           <Route exact path='/contact' component={Contact} />
           <Route exact path='/about' component={About} />
           <Route exact path='/posts' component={AllPosts}/>
-          <Route path='/posts/:id' component={SinglePost}/>
-          <Route path='/posts/new' component={PostForm} />
+          <Route exact path='/posts/:id' component={SinglePost}/>
+          <Route path='/post/new' component={PostForm} />
         </div>
       </Router>
     );

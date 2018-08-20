@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { updatePostFormData } from '../actions/postFormData'
 import { createPost } from '../actions/posts'
+import Navbar from './static/Navbar.js'
+import JumboNewPost from './static/JumboNewPost.js'
 
 
 class PostForm extends Component {
@@ -26,7 +28,10 @@ class PostForm extends Component {
     const { title, caption, img_url } = this.props.postFormData
     return(
       <div>
-      <h1>Upload a new Post!</h1>
+      <Navbar />
+      <JumboNewPost title={'Upload a new Post!'} />
+
+
         <form onSubmit={this.handleOnSubmit}>
           <input type="text"
           onChange={this.handleOnChange}

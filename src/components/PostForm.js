@@ -30,18 +30,23 @@ class PostForm extends Component {
         <form onSubmit={this.handleOnSubmit}>
           <input type="text"
           onChange={this.handleOnChange}
-          ref="title"
+          name="title"
+          value={title}
           placeholder="title" />
 
           <input type="text"
           onChange={this.handleOnChange}
-          ref="caption"
+          name="caption"
+          value={caption}
           placeholder="caption" />
 
           <input type="text"
           onChange={this.handleOnChange}
-          ref="img_url"
+          name="img_url"
+          value={img_url}
           placeholder="img_url" />
+
+          <input type="submit" />
 
         </form>
       </div>

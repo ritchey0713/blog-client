@@ -2,36 +2,29 @@ import React, { Component } from 'react'
 import{ Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import CSSTransitionGroup from 'react-addons-css-transition-group'
+import './RenderPhotos.css'
 
 import { incrementLike } from '../actions/posts.js'
 
 class RenderPhotos extends Component {
   render(){
-    const { post, i, comments } = this.props
-    debugger
+    const { post, comments } = this.props
     return(
-      <div classNmae="card-container" key={post.id}>
-        <div className="card">
-          <div className="photo">
+      <div className="grid-container" key={post.id}>
+        <div className="grid-wrap">
             <Link to={`/posts/${post.id}`}>
-            <img src={post.img_url} alt={post.caption} />
+            <img src={post.img_url} alt={post.caption} className='grid-photo'/>
             </Link>
-            <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}>
-              <span key={post.likes} className="likes-heart">{post.likes}</span>
-            </CSSTransitionGroup>
             <figcaption>
               <p>{post.caption}</p>
-              <div classNmae="control-buttons">
-              
+              <div className="control-buttons">
+                  <button>{post.likes}</button>
                 <Link className="button" to={`posts/${post.id}`}>
 
                 </Link>
               </div>
             </figcaption>
           </div>
-
-        </div>
       </div>
     )
   }

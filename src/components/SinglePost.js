@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import './SinglePost.css'
 
 import { getPost } from '../actions/posts.js'
 
@@ -12,14 +13,18 @@ class SinglePost extends Component{
     this.props.getPost(id)
   }
 
+
   render(){
+    console.log(this.props)
     return(
       <div>
-      i am a single post here!!!
-        {this.props.posts.title}
-        {this.props.posts.caption}
-        {this.props.posts.img_url}
-        {this.props.posts.likes}
+        <h1 className="container">{this.props.posts.title}</h1>
+        <h6 className="container">Caption:{this.props.posts.caption} <br />
+        <button>{this.props.posts.likes}</button></h6>
+        <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
+          <br />
+
+
       </div>
     )
   }

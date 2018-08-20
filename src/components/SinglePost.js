@@ -28,8 +28,7 @@ this.props.history.push('/')
       <div>
         <h1 className="container">{this.props.posts.title}</h1>
       <figcaption className="container-single">
-        <h6>Caption:{this.props.posts.caption} <br />
-        <button>{this.props.posts.likes}</button></h6>
+        <h6>Caption:{this.props.posts.caption} <br /></h6>
         <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
             <Comments post={this.props.posts} className="comments"/>
           </figcaption>

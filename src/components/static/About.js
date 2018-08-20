@@ -6,13 +6,9 @@ import Jumbotron from './Jumbotron'
 const About = (props) => {
     return(
       <div>
-      <Navbar />
-      <Jumbotron title="About Us" subtitle="Fill out the about page someday"/>
         <div className="container">
-          <h2>About Us</h2>
-            <p>dlskfjlkasdfhlksajdbfnlkjasjhflkjsadhflkjsadhfkljasdhflkjshdfljk
-            skjdfbklsdhflkjsdahflkjsadhflkjsdhflkshdfkljhsdlfkhsdkljfhskjldfhjlkjsdh
-            sdkfjls;dfjls;kdfjl;ksdjf;lksdjf;lksdjf;lkdjsf;lkjsdak;lfjsa;dlkfj;klsadjfadkls;</p>
+          <h2>Profile</h2>
+            <p>UNDER CONSTRUCTION</p>
         </div>
         <Footer />
       </div>

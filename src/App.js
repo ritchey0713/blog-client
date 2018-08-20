@@ -15,7 +15,8 @@ class App extends Component {
         <div>
           <Route path='/' component={Home} />
           <Route exact path='/posts' component={AllPosts}/>
-          <Route path='/posts/:id' component={SinglePost}/>
+          <Route path='/posts/`${post.id}`' component={SinglePost}/>
+          <Route path='/posts/new' component={PostForm} />
         </div>
       </Router>
     );

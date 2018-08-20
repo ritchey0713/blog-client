@@ -15,7 +15,6 @@ class Home extends Component {
       <Navbar />
       <Jumbotron title="Welcome" subtitle="put something here?!"/>
         <div className="container">
-          <h2>Welcome!</h2>
           <hr />
         </div>
         <Footer />

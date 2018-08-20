@@ -5,7 +5,7 @@ import Disqus from 'disqus-react'
 class Comments extends Component{
   render(){
     const disqusShortname = 'localhost-3000';
-  const disqusConfig = {
+    const disqusConfig = {
       url: this.props.post.url,
       identifier: this.props.post.id,
       title: this.props.post.title,
@@ -14,8 +14,8 @@ class Comments extends Component{
   return (
       <div>
           <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
-          </Disqus.CommentCount>
-          <p>{this.props.post.body}</p>
+          </Disqus.CommentCount >
+          
           <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </div>
     );

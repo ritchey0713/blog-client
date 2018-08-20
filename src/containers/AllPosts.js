@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { getPosts } from '../actions/posts.js'
-import PostGrid from '../components/PostGrid.js'
+import RenderPhotos from '../components/RenderPhotos.js'
 import './AllPosts.css'
 
 class AllPosts extends Component {
@@ -17,7 +17,7 @@ class AllPosts extends Component {
       <div >
         <h3>See what others are up to!</h3>
           {this.props.posts.map(post =>
-          <PostGrid key={post.id} {...this.props} post={post}/>)}
+          <RenderPhotos key={post.id} {...this.props} index={index} post={post}/>)}
       </div>
     )
   }

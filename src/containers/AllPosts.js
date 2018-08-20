@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { getPosts } from '../actions/posts.js'
+import PostGrid from '../components/PostGrid.js'
 import './AllPosts.css'
 
 class AllPosts extends Component {
@@ -11,6 +12,7 @@ class AllPosts extends Component {
   }
 
   render(){
+    const { post, index, comments } = this.props
     return(
       <div >
         <h3>See what others are up to!</h3>

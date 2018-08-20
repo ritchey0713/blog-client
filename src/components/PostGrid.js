@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import{ Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import CSSTansitionGroup from 'react-addons-css-transition-group'
+import CSSTransitionGroup from 'react-addons-css-transition-group'
 
 class PostGrid extends Component {
   render(){
+    const { post, index, comments } = this.props
     return(
       <div>
         <div>
@@ -19,7 +20,7 @@ class PostGrid extends Component {
             <figcaption>
               <p>{post.caption}</p>
               <div classNmae="control-buttons">
-                <button className="heart" onClick={this.props.addLike(i)}> &hearts; {post.likes} </button>
+                <button className="heart" onClick={this.props.addLike(index)}> &hearts; {post.likes} </button>
                 <Link className="button" to={`posts/${post.id}`}>
                   <span className="comment-count">
                     <span classNmae="speech-bubble"></span>
@@ -34,3 +35,5 @@ class PostGrid extends Component {
     )
   }
 }
+
+export default PostGrid

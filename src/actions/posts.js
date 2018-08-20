@@ -7,6 +7,13 @@ const addPost = post => {
   }
 }
 
+const setPosts = posts => {
+  return {
+    type: 'GET_ALL_POSTS',
+    posts
+  }
+}
+
 export const createPost = post => {
   return dispatch => {
     return fetch(`${API_URL}/posts`, {
@@ -20,5 +27,13 @@ export const createPost = post => {
     .then(post =>{
       dispatch(addPost(post))
     })
+  }
+}
+
+export const getPosts = () => {
+  return dispatch => {
+    return fetch(`${API_URL}/posts`)
+    .then(resp => resp.json())
+    .then(posts => dispatch(setPosts(posts)))
   }
 }

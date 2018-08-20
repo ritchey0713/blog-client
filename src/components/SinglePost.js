@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import RenderPhotos from './RenderPhotos'
 
 class SinglePost extends Component{
+
+  componentDidMount(){
+    const { id } = this.props.match.params
+    this.props.getPost(id)
+  }
+
   render(){
     const { postId } = this.props.params
     const index = this.props.posts.findIndex((post =>
@@ -19,3 +25,5 @@ class SinglePost extends Component{
     )
   }
 }
+
+export default SinglePost

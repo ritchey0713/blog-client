@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import './App.css';
+import './Home.css';
 import Navbar from '../components/static/Navbar'
 import Footer from '../components/static/Footer'
 import Jumbotron from '../components/static/Jumbotron'

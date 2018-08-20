@@ -6,7 +6,7 @@ import Jumbotron from './Jumbotron'
 const About = () => {
     return(
       <div>
-        <div className="container">
+        <div >
         <Navbar />
         <Jumbotron title={"Profile"} subtitle={'coming soon!'} />
           <h2>Profile</h2>

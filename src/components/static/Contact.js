@@ -6,7 +6,7 @@ import Jumbotron from './Jumbotron'
 const Contact = () => {
     return(
       <div>
-        <div className="container">
+        <div >
         <Navbar />
         <Jumbotron title={"Contact"} subtitle={"thank you for your time"} />
           <h2>Contact Us</h2>

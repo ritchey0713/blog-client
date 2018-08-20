@@ -4,8 +4,10 @@
   border: 1px solid lightgray;
   background: white;
   box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
-  position: relative;
-  max-width: 900px;
+  position: absolute;
+  float: left;
+  max-width: 450px;
+  max-height: 400px;
 }
 
 .container  {
@@ -26,4 +28,8 @@ button, .button{
   box-sizing: padding-box;
     border-color: blue;
     outline: 0;
+  }
+
+  .comments{
+    float: right;
   }

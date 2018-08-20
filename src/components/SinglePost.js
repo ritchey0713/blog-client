@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import './SinglePost.css'
+import Comments from './comments/Comments.js'
 
 import { getPost } from '../actions/posts.js'
-import Comments from './Comments.js'
+
 import { deletePost } from '../actions/posts.js'
 
 class SinglePost extends Component{
@@ -30,7 +31,7 @@ this.props.history.push('/')
         <button>{this.props.posts.likes}</button></h6>
         <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
           <br />
-          <Comments />
+          <Comments post={this.props.posts}/>
 
       </div>
     )

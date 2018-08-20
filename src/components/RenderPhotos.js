@@ -18,7 +18,7 @@ class RenderPhotos extends Component {
             <figcaption>
               <p>{post.caption}</p>
               <div className="control-buttons">
-                  <button>{post.likes}</button>
+                  <button onClick={this.incrementLike(post.id)}>{post.likes}</button>
                 <Link className="button" to={`posts/${post.id}`}>
 
                 </Link>

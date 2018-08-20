@@ -12,8 +12,10 @@ class AllPosts extends Component {
 
   render(){
     return(
-      <div>
-      index component
+      <div >
+        <h3>See what others are up to!</h3>
+          {this.props.posts.map(post =>
+          <PostGrid kay ={post.id} {...this.props} post={post}/>)}
       </div>
     )
   }

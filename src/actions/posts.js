@@ -1,5 +1,5 @@
 const API_URL = process.env.REACT_APP_API_URL
-
+// action creators 
 const addPost = post => {
   return {
     type: 'CREATE_NEW_POST',

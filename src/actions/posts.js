@@ -59,3 +59,17 @@ export const getPost = id => {
     .then(post => dispatch(setPost(post)))
   }
 }
+
+export const deleteItem = post => {
+  return dispatch => {
+    return fetch(`${API_URL}/posts/${post}`, {
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({post: post})
+    })
+    .then(resp => resp.json())
+    .then(post => dispatch(deletePost(post)))
+  }
+}

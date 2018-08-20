@@ -12,6 +12,7 @@ class App extends Component {
         <div>
           <Route exact path='/' component={Home} />
           <Route path='/posts' component={AllPosts} />
+          <Route path='/posts/:postId' component={SinglePosts} />
         </div>
       </Router>
     );

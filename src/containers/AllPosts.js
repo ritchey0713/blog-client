@@ -17,7 +17,7 @@ class AllPosts extends Component {
       <div >
         <h3>See what others are up to!</h3>
           {this.props.posts.map(post =>
-          <PostGrid kay ={post.id} {...this.props} post={post}/>)}
+          <PostGrid key={post.id} {...this.props} post={post}/>)}
       </div>
     )
   }

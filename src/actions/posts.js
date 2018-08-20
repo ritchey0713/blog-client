@@ -21,6 +21,12 @@ const setPost = post => {
   }
 }
 
+const deletePost = post => {
+  return {
+    type: 'DELETE_POST',
+    post
+  }
+}
 
 export const createPost = post => {
   return dispatch => {

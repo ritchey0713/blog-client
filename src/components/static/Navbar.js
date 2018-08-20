@@ -18,6 +18,7 @@ const Navbar = () => {
                 <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/posts">View all posts!</Link>
                 <Link className="nav-link" to="/posts/new">Create a Post!</Link>
               </li>
               <li className="nav-item dropdown">

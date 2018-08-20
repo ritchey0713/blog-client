@@ -15,7 +15,7 @@ class RenderPhotos extends Component {
             <img src={post.img_url} alt={post.caption} className='grid-photo'/>
             </Link>
             <figcaption>
-              <p>{post.caption}</p>
+              <p className="container">{post.caption}</p>
               <div className="control-buttons">
                 <Link className="button" to={`posts/${post.id}`}>
                   Add Comment

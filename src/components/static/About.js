@@ -7,6 +7,8 @@ const About = () => {
     return(
       <div>
         <div className="container">
+        <Navbar />
+        <Jumbotron title={"Profile"} subtitle={'coming soon!'} />
           <h2>Profile</h2>
             <p>UNDER CONSTRUCTION</p>
         </div>

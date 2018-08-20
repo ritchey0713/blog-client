@@ -21,12 +21,6 @@ const setPost = post => {
   }
 }
 
-const addLike = index => {
-  return {
-    type: 'ADD_LIKE',
-    index
-  }
-}
 
 export const createPost = post => {
   return dispatch => {
@@ -58,21 +52,4 @@ export const getPost = id => {
     .then(resp => resp.json())
     .then(post => dispatch(setPost(post)))
   }
-}
-
-export const incrementLike = post => {
-  return dispatch => {
-    return fetch(`${API_URL}/posts/${post.id}`, {
-      method: "PUT",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({post: post})
-    })
-    .then(resp => resp.json())
-    .then(post => {
-      dispatch(addLike(post))
-    })
-  }
-
 }

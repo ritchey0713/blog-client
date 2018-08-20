@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import './SinglePost.css'
 
 import { getPost } from '../actions/posts.js'
-
+import Comments from './Comments.js'
+import { deletePost } from '../actions/posts.js'
 
 class SinglePost extends Component{
 
@@ -12,6 +13,12 @@ class SinglePost extends Component{
     const { id } = this.props.match.params
     this.props.getPost(id)
   }
+
+  handleOnClick = () => {
+const { id } = this.props.match.params
+this.props.deletePost(id)
+this.props.history.push('/')
+}
 
 
   render(){
@@ -23,7 +30,7 @@ class SinglePost extends Component{
         <button>{this.props.posts.likes}</button></h6>
         <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
           <br />
-
+          <Comments />
 
       </div>
     )

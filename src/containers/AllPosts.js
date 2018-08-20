@@ -12,12 +12,11 @@ class AllPosts extends Component {
   }
 
   render(){
-    const { post, index, comments } = this.props
     return(
       <div >
         <h3>See what others are up to!</h3>
           {this.props.posts.map(post =>
-          <RenderPhotos key={post.id} {...this.props} index={index} post={post}/>)}
+          <RenderPhotos key={post.id} index={post.id} post={post}/>)}
       </div>
     )
   }

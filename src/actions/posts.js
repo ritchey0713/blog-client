@@ -14,6 +14,13 @@ const setPosts = posts => {
   }
 }
 
+const setPost = post => {
+  return {
+    type: 'GET_SINGLE_POST',
+    post
+  }
+}
+
 export const createPost = post => {
   return dispatch => {
     return fetch(`${API_URL}/posts`, {
@@ -35,5 +42,13 @@ export const getPosts = () => {
     return fetch(`${API_URL}/posts`)
     .then(resp => resp.json())
     .then(posts => dispatch(setPosts(posts)))
+  }
+}
+
+export const getPost = id => {
+  return dispatch => {
+    return fetch(`${API_URL}/posts/${id}`)
+    .then(resp => resp.json())
+    .then(post => dispatch(setPost(post)))
   }
 }

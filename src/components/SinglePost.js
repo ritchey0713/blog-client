@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import RenderPhotos from './RenderPhotos'
+import { connect } from 'react-redux'
+
+import { getPost } from '../actions/posts.js'
+
 
 class SinglePost extends Component{
 
@@ -10,20 +13,23 @@ class SinglePost extends Component{
   }
 
   render(){
-    const { postId } = this.props.params
-    const index = this.props.posts.findIndex((post =>
-    post.id === postId))
-    const post = this.props.posts[index]
-    const postComments = this.props.comments[postId] || []
-
     return(
       <div>
-        <RenderPhotos index={index}
-        post={post}
-        {...this.props} />
+      i am a single post here!!!
+        {this.props.posts.title}
+        {this.props.posts.caption}
+        {this.props.posts.img_url}
+        {this.props.posts.likes}
       </div>
     )
   }
 }
+const mapStateToProps = state => {
+  return({
+    posts: state.posts
+  })
+}
 
-export default SinglePost
+export default connect(mapStateToProps, {
+  getPost
+})(SinglePost)

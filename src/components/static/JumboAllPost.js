@@ -1,5 +1,5 @@
 import React from 'react'
-import './jumboAllPost.css';
+import './JumboAllPost.css';
 
 const JumboNewPost = (props) =>{
 

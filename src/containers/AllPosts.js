@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { getPosts } from '../actions/posts.js'
 import RenderPhotos from '../components/RenderPhotos.js'
 import './AllPosts.css'
+import JumboAllPost from '../components/static/JumboAllPost.js'
+import Navbar from '../components/static/Navbar.js'
 
 class AllPosts extends Component {
 
@@ -14,7 +16,8 @@ class AllPosts extends Component {
   render(){
     return(
       <div >
-        <h3>See what others are up to!</h3>
+      <Navbar />
+      <JumboAllPost title="See what others are up to!" subtitle={"click to comment!"}/>
           {this.props.posts.map(post =>
           <RenderPhotos key={post.id} index={post.id} post={post}/>)}
       </div>

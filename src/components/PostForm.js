@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { updatePostFormData } from '../actions/postFormData'
+
 class PostForm extends Component {
+
+  handleOnChange = (e) => {
+    const { name, value } = e.target
+    const currentPostData = Object.assign({}, this.props.postFormData, {
+          [name]: value
+        })
+        this.props.updatePostFormData(currentPostData)
+    }
+
+
   render(){
     return(
       <div>

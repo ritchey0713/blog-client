@@ -27,12 +27,12 @@ this.props.history.push('/')
     return(
       <div>
         <h1 className="container">{this.props.posts.title}</h1>
-        <h6 className="container">Caption:{this.props.posts.caption} <br />
+      <figcaption className="container-single">
+        <h6>Caption:{this.props.posts.caption} <br />
         <button>{this.props.posts.likes}</button></h6>
         <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
-          <br />
-          <Comments post={this.props.posts}/>
-
+            <Comments post={this.props.posts} className="comments"/>
+          </figcaption>
       </div>
     )
   }

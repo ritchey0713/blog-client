@@ -1,17 +1,12 @@
-.grid-photo {
-  margin: 0 2rem 2rem 2rem;
-  padding: 2rem;
-  border: 1px solid lightgray;
-  background: white;
-  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
-  position: absolute;
-  float: left;
-  max-width: 450px;
-  max-height: 400px;
-}
 
-.container  {
+.container-single  {
   text-align: center;
+  display: block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-right: 10px;
+  margin-bottom: 150px;
+  float: left;
 }
 
 button, .button{
@@ -32,4 +27,5 @@ button, .button{
 
   .comments{
     float: right;
+    display: block;
   }

@@ -19,6 +19,9 @@ class Home extends Component {
           <p> This app is free to use to post photos from your life! There is no sign up and you are free to scroll
           but, if you want to leave comments for authors, you have to sign in using your email!</p>
         </div>
+        <br />
+        <br />
+        <br />
         <Footer />
       </div>
     )

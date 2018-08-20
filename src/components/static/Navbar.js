@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return(
       <nav className="navbar navbar-expand-xl navbar-dark bg-dark">
-      <Link className="navbar-brand" to="#">APP NAME GOES HERE!</Link>
+      <Link className="navbar-brand" to="/">Looking Glass</Link>
       <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

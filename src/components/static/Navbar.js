@@ -19,11 +19,11 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/posts">View all posts!</Link>
-                <Link className="nav-link" to="/post/new">Create a Post!</Link>
               </li>
               <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle" to="https://example.com" id="dropdown06" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</Link>
                 <div className="dropdown-menu" aria-labelledby="dropdown06">
+                  <Link className="dropdown-item" to="/post/new">Create a Post!</Link>
                   <Link className="dropdown-item" to="/contact">Contact Us</Link>
                   <Link className="dropdown-item" to="/about">Your Profile</Link>
                   <Link className="dropdown-item" to="#">Log Out</Link>

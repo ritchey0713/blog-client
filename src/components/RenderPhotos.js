@@ -3,8 +3,13 @@ import{ Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 import './RenderPhotos.css'
+import LikeButton from './LikeButton.js'
 
 class RenderPhotos extends Component {
+
+  handleOnClick = () => {
+    this.props.likePost(this.props.post)
+  }
 
   render(){
     const { post, comments } = this.props
@@ -20,6 +25,7 @@ class RenderPhotos extends Component {
                 <Link className="button" to={`posts/${post.id}`}>
                   Add Comment
                 </Link>
+                <LikeButton post={post} likePost={this.handleOnClick} />
               </div>
             </figcaption>
           </div>

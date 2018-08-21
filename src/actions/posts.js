@@ -28,7 +28,14 @@ const deletePost = post => {
   }
 }
 
-// async actions 
+const addLikes = post => {
+  return {
+    type: 'ADD_LIKE',
+    post
+  }
+}
+
+// async actions
 
 export const createPost = post => {
   return dispatch => {
@@ -73,5 +80,22 @@ export const deleteItem = post => {
     })
     .then(resp => resp.json())
     .then(post => dispatch(deletePost(post)))
+  }
+}
+
+export const likePost = post => {
+  const updatedLikes = Object.assign(...post, {likes: post.likes + 1})
+  return dispatch => {
+    return fetch(`${API_URL}/posts/${post.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+        body: JSON.stringify({post: updatedLikes})
+    })
+    .then(resp => resp.json())
+    .then(post => {
+      dispatch(addLikes(post))
+    })
   }
 }

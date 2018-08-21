@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 import './RenderPhotos.css'
 import LikeButton from './LikeButton.js'
+import { likePost } from '../actions/posts.js'
 
 class RenderPhotos extends Component {
 
@@ -34,5 +35,13 @@ class RenderPhotos extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return({
+    posts: state.posts
+  })
+}
 
-export default RenderPhotos
+
+export default connect( mapStateToProps, {
+  likePost
+})(RenderPhotos)

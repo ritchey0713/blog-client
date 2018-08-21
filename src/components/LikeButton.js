@@ -4,9 +4,9 @@ class LikeButton extends Component {
   render(){
     return(
       <div>
-        <button>
-          onClick={this.props.likePost}
-          likes: {this.props.posts.likes}
+        <button onClick={this.props.likePost}>
+
+          likes: {this.props.post.likes}
         </button>
       </div>
     )

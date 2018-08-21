@@ -30,6 +30,7 @@ this.props.history.push('/')
       <Navbar />
       <JumboSinglePost title={this.props.posts.title} subtitle={this.props.posts.caption} />
         <figcaption className="container-single">
+        <strong> &hearts;Likes: {this.props.posts.likes}</strong>
           <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
             <Comments post={this.props.posts} className="comments"/>
           </figcaption>

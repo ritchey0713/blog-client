@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter  as Router, Route } from 'react-router-dom'
-import { connect } from 'react-redux'
+
 
 
 import Home from './containers/Home.js'

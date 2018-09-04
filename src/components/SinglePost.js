@@ -1,30 +1,28 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import './SinglePost.css'
 import Comments from './comments/Comments.js'
 import { getPost } from '../actions/posts.js'
-import { deletePost } from '../actions/posts.js'
+import { deleteItem } from '../actions/posts.js'
 import Navbar from './static/Navbar'
 import JumboSinglePost from './static/JumboSinglePost'
 
 class SinglePost extends Component{
 
-  componentDidMount(){
+
+  componentWillMount(){
     const { id } = this.props.match.params
     this.props.getPost(id)
   }
 
   handleOnClick = () => {
 const { id } = this.props.match.params
-this.props.deletePost(id)
+this.props.deleteItem(id)
 this.props.history.push('/')
 }
 
-
   render(){
-
     return(
       <div>
       <Navbar />
@@ -40,7 +38,7 @@ this.props.history.push('/')
 }
 const mapStateToProps = state => {
   return({
-    posts: state.posts
+    posts: state.posts[0]
   })
 }
 

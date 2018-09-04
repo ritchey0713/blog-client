@@ -14,12 +14,13 @@ class AllPosts extends Component {
   }
 
   render(){
-    console.log(this.props.posts)
+    const allPost = this.props.posts
+    console.log(allPost)
     return(
       <div >
       <Navbar />
       <JumboAllPost title="See what others are up to!" subtitle={"click to comment!"}/>
-          {this.props.posts.map(post =>
+          {allPost.map(post =>
           <RenderPhotos key={post.id} index={post.id} post={post}/>)}
       </div>
     )

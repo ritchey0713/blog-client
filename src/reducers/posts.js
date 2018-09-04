@@ -8,7 +8,7 @@ export default (state = [], action) => {
       return action.posts
 
     case 'GET_SINGLE_POST':
-      return action.post
+      return [action.post]
 
     case 'ADD_LIKE':
       return state.map((post) => {

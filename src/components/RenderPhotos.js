@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import{ Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import CSSTransitionGroup from 'react-addons-css-transition-group'
 import './RenderPhotos.css'
 import LikeButton from './LikeButton.js'
 import { likePost } from '../actions/posts.js'
@@ -13,7 +12,7 @@ class RenderPhotos extends Component {
   }
 
   render(){
-    const { post, comments } = this.props
+    const { post } = this.props
     return(
       <div className="grid-container" key={post.id}>
         <div className="grid-wrap">

@@ -19,6 +19,16 @@ export default (state = [], action) => {
         }
       })
 
+    case "SORT_POSTS":
+      return state.slice().sort(function(a, b) {
+        return a.likes - b.likes
+      })
+
+      case "SORT_BEST_POSTS":
+        return state.slice().sort(function(a, b) {
+          return b.likes - a.likes
+        })
+
     default:
       return state
   }

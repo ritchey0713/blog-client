@@ -15,7 +15,7 @@ class AllPosts extends Component {
 
   render(){
     const allPost = this.props.posts
-    console.log(allPost)
+    
     return(
       <div >
       <Navbar />

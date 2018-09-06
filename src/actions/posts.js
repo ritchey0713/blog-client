@@ -35,6 +35,19 @@ const addLikes = post => {
   }
 }
 
+export const sortingPosts = posts => {
+  return {
+    type: 'SORT_POSTS',
+    posts
+  }
+}
+
+export const sortingBestPosts = posts => {
+  return {
+    type: 'SORT_BEST_POSTS',
+    posts
+  }
+}
 // async actions
 
 export const createPost = post => {
@@ -69,6 +82,7 @@ export const getPost = id => {
   }
 }
 
+
 export const deleteItem = post => {
   return dispatch => {
     return fetch(`${API_URL}/posts/${post}`, {
@@ -76,10 +90,12 @@ export const deleteItem = post => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({post: post})
+      body: JSON.stringify({post : post})
     })
     .then(resp => resp.json())
-    .then(post => dispatch(deletePost(post)))
+    .then(post => {
+      dispatch(deletePost(post))
+    })
   }
 }
 

@@ -11,7 +11,7 @@ import JumboSinglePost from './static/JumboSinglePost'
 class SinglePost extends Component{
 
 
-  componentWillMount(){
+  componentDidMount(){
     const { id } = this.props.match.params
     this.props.getPost(id)
   }
@@ -23,13 +23,16 @@ this.props.history.push('/')
 }
 
   render(){
+    console.log(this.props)
     return(
       <div>
       <Navbar />
       <JumboSinglePost title={this.props.posts.title} subtitle={this.props.posts.caption} />
         <figcaption className="container-single">
         <strong> &hearts;Likes: {this.props.posts.likes}</strong>
+
           <img src={this.props.posts.img_url} alt={this.props.posts.caption} className='grid-photo'/>
+          <button onClick={this.handleOnClick}> DELETE POST </button>
             <Comments post={this.props.posts} className="comments"/>
           </figcaption>
       </div>
@@ -43,5 +46,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {
-  getPost
+  getPost,
+  deleteItem
 })(SinglePost)

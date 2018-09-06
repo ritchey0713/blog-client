@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import './RenderPhotos.css'
 import LikeButton from './LikeButton.js'
 import { likePost } from '../actions/posts.js'
+import { sortingPosts } from '../actions/posts.js'
+import { sortingBestPosts } from '../actions/posts.js'
 
 class RenderPhotos extends Component {
 
@@ -14,6 +16,9 @@ class RenderPhotos extends Component {
   render(){
     const { post } = this.props
     return(
+      <div>
+      <button onClick={this.props.sortingPosts}> Sort by least Likes!</button>
+      <button onClick={this.props.sortingBestPosts}> Sort by most Likes!</button>
       <div className="grid-container" key={post.id}>
         <div className="grid-wrap">
             <Link to={`/posts/${post.id}`}>
@@ -30,6 +35,7 @@ class RenderPhotos extends Component {
             </figcaption>
           </div>
       </div>
+      </div>
     )
   }
 }
@@ -42,5 +48,7 @@ const mapStateToProps = state => {
 
 
 export default connect( mapStateToProps, {
-  likePost
+  likePost,
+  sortingPosts,
+  sortingBestPosts
 })(RenderPhotos)
